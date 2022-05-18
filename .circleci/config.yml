@@ -1,26 +1,214 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
-# See: https://circleci.com/docs/2.0/configuration-reference
-version: 2.1
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="27"
+    android:versionName="8.1.0"
+    package="com.transsion"
+    coreApp="true">
 
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
-jobs:
-  say-hello:
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
-    docker:
-      - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
-    steps:
-      - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+    <uses-sdk
+        android:minSdkVersion="27"
+        android:targetSdkVersion="27" />
 
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
-workflows:
-  say-hello-workflow:
-    jobs:
-      - say-hello
+    <eat-comment />
+
+    <protected-broadcast
+        android:name="android.intent.action.SCREEN_OFF" />
+
+    <protected-broadcast
+        android:name="android.intent.action.SCREEN_ON" />
+
+    <protected-broadcast
+        android:name="android.intent.action.USER_PRESENT" />
+
+    <protected-broadcast
+        android:name="android.intent.action.TIME_TICK" />
+
+    <protected-broadcast
+        android:name="android.intent.action.TIMEZONE_CHANGED" />
+
+    <protected-broadcast
+        android:name="android.intent.action.BOOT_COMPLETED" />
+
+    <protected-broadcast
+        android:name="android.intent.action.PACKAGE_INSTALL" />
+
+    <protected-broadcast
+        android:name="android.intent.action.PACKAGE_ADDED" />
+
+    <protected-broadcast
+        android:name="android.intent.action.PACKAGE_REPLACED" />
+
+    <protected-broadcast
+        android:name="android.intent.action.PACKAGE_REMOVED" />
+
+    <protected-broadcast
+        android:name="android.intent.action.PACKAGE_CHANGED" />
+
+    <protected-broadcast
+        android:name="android.intent.action.PACKAGE_RESTARTED" />
+
+    <protected-broadcast
+        android:name="android.intent.action.PACKAGE_DATA_CLEARED" />
+
+    <protected-broadcast
+        android:name="android.intent.action.UID_REMOVED" />
+
+    <protected-broadcast
+        android:name="android.intent.action.CONFIGURATION_CHANGED" />
+
+    <protected-broadcast
+        android:name="android.intent.action.LOCALE_CHANGED" />
+
+    <protected-broadcast
+        android:name="android.intent.action.BATTERY_CHANGED" />
+
+    <protected-broadcast
+        android:name="android.intent.action.BATTERY_LOW" />
+
+    <protected-broadcast
+        android:name="android.intent.action.BATTERY_OKAY" />
+
+    <protected-broadcast
+        android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+
+    <protected-broadcast
+        android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+
+    <protected-broadcast
+        android:name="android.intent.action.ACTION_SHUTDOWN" />
+
+    <protected-broadcast
+        android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+
+    <protected-broadcast
+        android:name="android.intent.action.DEVICE_STORAGE_OK" />
+
+    <protected-broadcast
+        android:name="android.intent.action.NEW_OUTGOING_CALL" />
+
+    <protected-broadcast
+        android:name="android.intent.action.REBOOT" />
+
+    <protected-broadcast
+        android:name="android.intent.action.DOCK_EVENT" />
+
+    <protected-broadcast
+        android:name="android.app.action.ENTER_CAR_MODE" />
+
+    <protected-broadcast
+        android:name="android.app.action.EXIT_CAR_MODE" />
+
+    <protected-broadcast
+        android:name="android.app.action.ENTER_DESK_MODE" />
+
+    <protected-broadcast
+        android:name="android.app.action.EXIT_DESK_MODE" />
+
+    <protected-broadcast
+        android:name="android.backup.intent.RUN" />
+
+    <protected-broadcast
+        android:name="android.backup.intent.CLEAR" />
+
+    <protected-broadcast
+        android:name="android.backup.intent.INIT" />
+
+    <protected-broadcast
+        android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+
+    <protected-broadcast
+        android:name="android.bluetooth.adapter.action.SCAN_MODE_CHANGED" />
+
+    <protected-broadcast
+        android:name="android.bluetooth.adapter.action.DISCOVERY_STARTED" />
+
+    <protected-broadcast
+        android:name="android.bluetooth.adapter.action.DISCOVERY_FINISHED" />
+
+    <protected-broadcast
+        android:name="android.bluetooth.adapter.action.LOCAL_NAME_CHANGED" />
+
+    <protected-broadcast
+        android:name="android.bluetooth.device.action.FOUND" />
+
+    <protected-broadcast
+        android:name="android.bluetooth.device.action.DISAPPEARED" />
+
+    <protected-broadcast
+        android:name="android.bluetooth.device.action.CLASS_CHANGED" />
+
+    <protected-broadcast
+        android:name="android.bluetooth.device.action.ACL_CONNECTED" />
+
+    <protected-broadcast
+        android:name="android.bluetooth.device.action.ACL_DISCONNECT_REQUESTED"
+/>
+
+    <protected-broadcast
+        android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
+
+    <protected-broadcast
+        android:name="android.bluetooth.device.action.NAME_CHANGED" />
+
+    <protected-broadcast
+        android:name="android.bluetooth.device.action.BOND_STATE_CHANGED" />
+
+    <protected-broadcast
+        android:name="android.bluetooth.device.action.NAME_FAILED" />
+
+    <protected-broadcast
+        android:name="android.bluetooth.device.action.PAIRING_REQUEST" />
+
+    <protected-broadcast
+        android:name="android.bluetooth.device.action.PAIRING_CANCEL" />
+
+    <permission
+        android:name="android.permission.GLOBAL_SEARCH"
+        android:protectionLevel="0x3"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS" />
+
+    <permission
+        android:name="android.permission.GLOBAL_SEARCH_CONTROL"
+        android:protectionLevel="0x2"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS" />
+
+    <permission
+        android:name="android.permission.SET_WALLPAPER_COMPONENT"
+        android:protectionLevel="0x3"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS" />
+
+    <permission
+        android:name="android.permission.ADVANCED_WIDGET_API"
+        android:protectionLevel="0x0" />
+
+    <application
+        android:theme="@ref/0x06080002"
+        android:label="@ref/0x060e001c"
+        android:icon="@ref/0x0602001d"
+        android:allowClearUserData="false"
+        android:hasCode="false"
+        android:process="com.transsion.system"
+        android:killAfterRestore="false"
+        android:supportsRtl="true"
+        android:defaultToDeviceProtectedStorage="true"
+        android:directBootAware="true">
+
+        <activity
+            android:theme="@ref/0x060800a0"
+            android:name="com.transsion.app.ReviewPermissionActivity"
+            android:exported="true"
+            android:process=":ui">
+
+            <intent-filter>
+
+                <action
+                    android:name="transsion.intent.action.REVIEWPERMISSION" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
